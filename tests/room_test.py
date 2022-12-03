@@ -5,8 +5,8 @@ from classes.song import Song
 
 class TestRoom(unittest.TestCase):
     def setUp(self):
-        self.room_1 = Room("fun", 20)
-        self.room_2 = Room("party", 1)
+        self.room_1 = Room("fun", 20, 40)
+        self.room_2 = Room("party", 1, 150)
         self.guest_1 = Guest("steve", 100)
         self.guest_2 = Guest("tony", 1000)
         self.room_2.check_guest_in(self.guest_2)
