@@ -20,19 +20,16 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(19, self.room_1.space)
         self.assertEqual(True, self.room_1.is_guest_in_room(self.guest_1))
 
-    @unittest.skip("demonstrating skipping")
     def test_check_guest_in__no_space(self):
         self.room_2.check_guest_in(self.guest_1)
         self.assertEqual(0, self.room_2.space)
         self.assertEqual(False, self.room_2.is_guest_in_room(self.guest_1))
 
-    @unittest.skip("demonstrating skipping")
     def test_check_guest_out__increase_space(self):
         self.room_2.check_guest_out(self.guest_2)
         self.assertEqual(1, self.room_2.space)
         self.assertEqual(False, self.room_2.is_guest_in_room(self.guest_2))
 
-    @unittest.skip("demonstrating skipping")
     def test_check_guest_out__no_guest_in_room(self):
         self.room_2.check_guest_out(self.guest_1)
         self.assertEqual(0, self.room_2.space)
