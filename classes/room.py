@@ -3,6 +3,7 @@ class Room:
         self.name = input_name
         self.space = input_space
         self.guest_list = []
+        self.now_playing = ""
 
     def is_guest_in_room(self, guest):
         if guest in self.guest_list:
@@ -20,4 +21,6 @@ class Room:
             self.guest_list.remove(guest)
             self.space += 1
 
+    def add_song(self, song):
+        self.now_playing = song.name
 
