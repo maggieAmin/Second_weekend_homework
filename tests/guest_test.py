@@ -23,3 +23,5 @@ class TestGuest(unittest.TestCase):
     def test_remove_money(self):
         self.guest_1.remove_money(30)
         self.assertEqual(70, self.guest_1.cash)
+
+        
